@@ -1,0 +1,11 @@
+<h1>~메인화면~</h1>
+<p>CRUD과제 메인화면(board#index)</p>
+
+<a href="/board/new">글쓰기</a> <br>
+
+<% @list_post.each do |p| %>
+    번호 : <%= p.id %> <br>
+    제목 : <a href="/board/show/<%= p.id %>"><%= p.title %></a> <br>
+    작성자 : <%= p.editor %> <br>
+    <hr/>
+<% end %>
